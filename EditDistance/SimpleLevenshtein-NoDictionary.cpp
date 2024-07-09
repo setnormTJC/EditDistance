@@ -88,7 +88,7 @@ int recursiveCalcLevenshteinDistance(const string& a, const string& b)
 
 int main()
 {
-	string s1 = "Mikayla";
+	string s1 = "Mikayla123456789";
 	string s2 = "Miniya";
 
 	//cout << "Hamming distance between " << s1 << " and " << s2 << " is: "
@@ -101,5 +101,6 @@ int main()
 	cout << "MAX POSSIBLE distance between the two strings is: " << std::max(s1.length(), s2.length()) << "\n";
 
 	cout << "\nTotal number of recursive calls: " << recursiveCallCount << "\n";
+	cout << "\n\n2^N (where N = longer string length) = " << pow(2, std::max(s1.length(), s2.length())) << "\n";
 	return 0; 
 }
